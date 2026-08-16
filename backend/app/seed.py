@@ -93,7 +93,8 @@ async def _upsert_user(email: str, password: str, role: str, enterprise_id: str,
 async def seed_all() -> dict:
     admin_email = os.environ["ADMIN_EMAIL"]
     admin_password = os.environ["ADMIN_PASSWORD"]
-    demo_name = os.environ["DEMO_ENTERPRISE_NAME"]\n    demo_password = os.environ["DEMO_USER_PASSWORD"]
+    demo_name = os.environ["DEMO_ENTERPRISE_NAME"]
+    demo_password = os.environ["DEMO_USER_PASSWORD"]
 
     # Production enterprise (contest pilot tenant)
     prod_ent_id = await _upsert_enterprise("VyaparPulse Pilot Enterprise", is_demo=False)
